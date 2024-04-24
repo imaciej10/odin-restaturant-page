@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  --header-color: yellow;
+  --footer-color: red;
+  --main-color: blue;
+  --image-color: green;
+}
+p {
+  font-size: 1.2rem;
+}
+
+header {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 2rem;
+}
+nav {
+  padding: 2rem;
+  height: 10vh;
+  width: 100vw;
+  background-color: var(--header-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-content: center;
+}
+
+.cooks {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.logo {
+  width: 4rem;
+  height: auto;
+}
+#content {
+  display: grid;
+  gap: 2rem;
+  justify-items: center;
+}
+
+.avi {
+  border-radius: 0.5rem;
+  border: 1px solid var(--image-color);
+  width: 13vw;
+  height: auto;
+  grid-row: 2;
+}
+
+body {
+  width: 100%;
+  padding: 2rem;
+  height: 60vh;
+  text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+button {
+  width: 15ch;
+  height: 5ch;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Gallery */
+
+.imgContainer {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.galleryImage {
+  width: 250px;
+  height: auto;
+}
