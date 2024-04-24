@@ -5,36 +5,66 @@
 }
 :root {
   font-size: 16px;
-  --header-color: yellow;
-  --footer-color: red;
-  --main-color: blue;
+  --header-color: gray;
+  --footer-color: beige;
+  --main-color: lightblue;
   --image-color: green;
+  --button-color: black;
+}
+
+.active {
+  background-color: purple;
+}
+.logo:hover {
+  outline: 1px solid white;
+  outline-offset: 1rem;
+}
+button:hover {
+  transform: scale(0.95);
 }
 p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  line-height: 2ch;
 }
 
 header {
   width: 100vw;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-items: center;
-  padding: 2rem;
+  background-color: var(--header-color);
 }
+
 nav {
-  padding: 2rem;
-  height: 10vh;
+  padding: 1rem 6rem;
+  height: 100px;
   width: 100vw;
   background-color: var(--header-color);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-content: center;
+  justify-items: center;
+  align-items: center;
 }
 
 .cooks {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  column-gap: 2rem;
+  justify-items: center;
+}
+
+.cooksTitle {
+  font-size: 2rem;
+}
+.cook {
+  display: grid;
+  justify-items: center;
+  row-gap: 1rem;
+}
+
+.name {
+  font-size: 1.8rem;
 }
 
 .logo {
@@ -43,41 +73,129 @@ nav {
 }
 #content {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
+  padding: 1rem 4rem;
   justify-items: center;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 .avi {
   border-radius: 0.5rem;
   border: 1px solid var(--image-color);
-  width: 13vw;
+  width: 16vw;
   height: auto;
   grid-row: 2;
 }
 
 body {
   width: 100%;
-  padding: 2rem;
+  padding: 0 2rem;
   height: 60vh;
   text-wrap: wrap;
   display: flex;
+  row-gap: 2rem;
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  background-color: var(--main-color);
 }
 
 button {
   width: 15ch;
-  height: 5ch;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 0.5rem;
+  font-size: 1.3rem;
+  background-color: var(--button-color);
+  color: var(--main-color);
+  border: 0.1rem var(--main-color) solid;
+  font-weight: 500;
+}
+
+/* menu tab */
+
+.menuContainer {
+  display: grid;
+  gap: 2rem;
+}
+.mealName {
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: auto;
+}
+
+.mealPrice {
+  font-size: 1.6rem;
+}
+
+.mealDescription {
+  font-size: 1.5rem;
+}
+
+.menuTitle {
+  font-size: 2.5rem;
+}
+
+.mealContainer {
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+  border: 2px dotted black;
+  padding: 2rem 1rem;
+}
+/* about tab */
+
+.about {
+  display: grid;
+  justify-items: center;
+  row-gap: 2.3rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+}
+
+.about-text {
+  font-size: 1.5rem;
+  line-height: 3.5ch;
+}
+
+.location {
+  font-size: 1.8rem;
+}
+
+.map {
+  width: 800px;
+  height: 500px;
+  border-radius: 0.8rem;
   border: none;
 }
 
+/* footer */
+
 .footer {
-  display: flex;
-  align-items: center;
+  display: grid;
   justify-items: center;
+  width: 100vw;
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  font-style: italic;
+  background-color: var(--footer-color);
+  padding: 2rem;
+}
+
+.socialTitle {
+  font-size: 2rem;
+  grid-area: 1 / 1 / 2 /3;
+}
+
+.social {
+  width: 50vw;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Gallery */
@@ -85,11 +203,31 @@ button {
 .imgContainer {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  justify-items: center;
+  gap: 1rem;
   width: 100%;
   height: 100%;
 }
 
 .galleryImage {
-  width: 250px;
-  height: auto;
+  width: 500px;
+  height: 350px;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.display {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.galleryTitle {
+  font-size: 2rem;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-weight: 500;
 }
